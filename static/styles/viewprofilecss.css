@@ -1,0 +1,93 @@
+body{
+    /* height: 100vh; */
+
+}
+
+.view_profile{
+    margin: 0;
+    color: white;
+    min-height: 80vh;
+    padding-bottom: 5em;
+    background: url("../resources/spark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;  
+}
+
+.view_profile_columns{
+    padding-top: 1em;
+}
+
+.view_profile_column_1{
+    color: white;
+    background-color: #5e6a71;
+    margin: 1em;
+    padding: 1em;
+    padding-left: 3em;
+
+}
+.view_profile_line{
+    margin-top:-.1em;
+    margin-bottom:-.1em;
+    color:#5e6a71;
+
+}
+
+.view_profile_information_general{
+    margin-bottom: 1em;
+    margin-top: 2em;
+    float: left;
+}
+
+.view_profile_information_student{
+    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-left: 3em;
+    float: left;
+}
+
+.view_profile_information_pref{
+    margin-bottom: 1em;
+    margin-top: 2em;
+    clear: both;
+}
+
+
+.status_accepted{
+    background-color: #0e8a16;
+    color: #ffffff;
+    height: 20px;
+    padding: .15em 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    border-radius: 2px;
+    box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+    display: inline-block!important;
+}
+
+.status_rejected{
+    background-color: #b60205;
+    color: #ffffff;
+    height: 20px;
+    padding: .15em 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    border-radius: 2px;
+    box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+    display: inline-block!important;
+}
+
+.status_pending{
+    background-color: #fbca04;
+    color: black;
+    height: 20px;
+    padding: .15em 4px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    border-radius: 2px;
+    box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+    display: inline-block!important;
+}

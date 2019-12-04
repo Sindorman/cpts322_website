@@ -1,0 +1,28 @@
+footer{
+
+    background-color: #981e32;
+    color:white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4vh;
+}
+
+.footer_text{
+    display: block;
+    
+}
+
+.contact_us{
+    float: left;
+    margin-top: 2em;
+
+}
+
+.copy{
+    margin-top: 2em;
+}
+
+a.footer-ref{
+    color: white;
+}

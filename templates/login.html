@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+    <link rel="shortcut icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/styles/logincss.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/viewprofilecss.css">
+</head>
+
+
+<body>
+        {% include 'header.html' %}
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+    <div class = "login_page">
+     <form id="login_box_form" class="login_box_form" method = "POST" action="/login">
+        <h1 class="login_box_form_header">Login</h1>
+        <input type="email" name="email" placeholder="Your Email" class="input is-large"><br>
+        <input type="password" name="password" placeholder="Your Password" class="input is-large"><br>
+        <div class="field">
+            <label class="checkbox">
+                <input type="checkbox">
+                Remember me
+            </label>
+        </div>
+        <button class="button is-block is-info is-large is-fullwidth">Sign In</button>
+        <hr class="login_box_form_line">
+        <div class="login_box_form_signup">Don't have an account? <a href ="../signup">Sign Up</a>
+        </div>
+     </form>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+.create_course_box_form{
+    align-content: center;
+    text-align: center;
+    padding: 4em;
+    margin-top:5em;
+    font-size: 120%;
+    height: 50%;
+    background: #5e6a71;
+}
+
+.create_course_page{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 83%;
+    justify-content: center;
+    background: url("../resources/spark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+
+}
+
+.create_course_box_form_header{
+    font-weight: bold;
+    color:white;
+}
+
+.create_course_box_form_name{
+    margin: .1em;
+    border-color: black;
+    border-width: .15em;
+}
+
+.create_course_box_form_password{
+    margin: .1em;
+    border-color: black;
+    border-width: .15em;
+}
+
+.create_course_box_form_signup{
+    color: white;
+}

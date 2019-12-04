@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Create course</title>
+    <link rel="shortcut icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/styles/create_course.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    {% include 'header.html' %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          <div class="notification is-danger">
+              {{ messages[0] }}
+          </div>
+      {% endif %}
+      {% endwith %}
+    <div class = "create_course_page">
+     <form class="create_course_box_form" method = "POST" action="create-course">
+        <h1 class="create_course_box_form_header">Create new course</h1>
+        <input type="text" name="create_course_input" placeholder="Course Name" class="create_course_box_form_name"><br>
+        <button class="select_btn btn-md btn-primary" type="submit" value="Submit" style="margin: 2em;">Create course</button><br>
+        </div>
+     </form>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

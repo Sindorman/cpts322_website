@@ -1,0 +1,32 @@
+.display_course_box_form{
+    align-content: center;
+    text-align: center;
+    font-size: 120%;
+    height: auto;
+    padding: 4em;
+    margin:10em;
+    color: white;
+    background-color: #5e6a71;
+
+}
+.display_course_page{
+
+    justify-content: center;
+    background: url("../resources/spark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;  
+    min-height: 80vh;
+
+}
+
+.display_course_box_form_header{
+    font-weight: bold;
+    color:white;
+}
+
+.list_all_courses{
+    text-align: left;
+    padding-top: 2em;
+    padding-right: 8em;
+} 

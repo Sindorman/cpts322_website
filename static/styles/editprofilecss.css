@@ -1,0 +1,133 @@
+
+
+.edit_profile{
+    background: url("../resources/spark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    color:white;
+    min-height: 80vh;
+}
+
+.apply_to_class_TA{
+    height: 20px;
+    margin-left: 1em;
+    color: white;
+}
+
+.edit_student_TA_app{
+    margin-left: 1em;
+}
+
+.input_box{
+    width: 300px;
+}
+
+input{
+    width: clac(100% - 300px);
+}
+
+.edit_course_pref_input {
+    width: 100px;
+    margin-left: 1em;
+}
+
+.edit_delete_course_pref_input {
+    display: inline;
+    margin: 5px;
+    margin-left: 1em;
+    
+}
+
+.save_profile_changes {
+    margin: 1em;
+    width: 150px;
+
+}
+.cancel_profile_changes{
+    margin: 1em;
+    width: 150px;
+}
+
+.edit_buttons{
+    clear: both;
+}
+
+.edit_profile_columns{
+    padding-top: 1em;
+}
+
+.edit_profile_column_1{
+    background: #5e6a71;
+    margin-bottom: 4em;
+    padding: 2em;
+}
+
+.view_profile_line{
+    margin-top:-.1em;
+    margin-bottom:-.1em;
+    color:#5e6a71;
+
+}
+
+.edit_profile_information_general{
+    padding: 1em;
+    margin: 1em;    
+    float: left;
+}
+
+.edit_profile_information_student{
+    padding: 1em;
+    margin: 1em;
+    margin-left: 4em;
+    float: left;
+}
+
+.edit_profile_information_pref{
+    padding: 1em;
+    margin: 1em;    
+    clear: both;
+}
+
+.edit_name_input{
+    margin: 5px;
+    margin-left: 6px;
+}
+.edit_ID_input{
+    margin: 5px;
+    margin-left: 27px;
+}
+.edit_email_input{
+    margin: 5px;
+    margin-left: 6px;
+}
+.edit_phone_input{
+    margin: 5px;
+    margin-left: 5px;
+}
+
+.edit_major_input{
+    margin: 5px;
+    margin-left: 32px;
+}
+.edit_gpa_input{
+    margin: 5px;
+    margin-left: 41px;
+}
+.edit_graduation_date_input{
+    margin: 5px;
+    margin-left: 2px;
+}
+.edit_experience_input{
+    margin-top: 5px;
+}
+.edit_add_course_input{
+    margin-top: 5px;
+}
+
+.edit_profile_line{
+    margin-top:-.1em;
+    margin-bottom:-.1em;
+    color:#5e6a71;
+
+}

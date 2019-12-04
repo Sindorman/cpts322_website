@@ -1,0 +1,106 @@
+.createProfile{
+    /* margin: 2em; */
+    min-height: 80vh;
+    padding: 2em;
+    background: url("../resources/spark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;  
+
+}
+
+.account_info {
+    color: white;
+    background-color: #5e6a71;
+    display: block;
+    outline: .15em solid black;
+    width: 30%;
+    margin-bottom: 2em;
+    justify-content: center;
+}
+.firstname_input {
+    margin-left: 4px;
+}
+.lastname_input {
+    margin-left: 6px;
+}
+
+.wsuID_input {
+    margin-left: 20px;
+}
+
+.email_input {
+    margin-left: 0px;
+}
+.phone_input {
+    margin-left: 25px;
+}
+.password_input {
+    margin-left: 16px;
+}
+
+.accountInputInfo {
+    margin: 24px;
+    padding: 24px;
+}
+
+.firstNameInput {
+    margin: 12px;
+    padding-top: 6px;
+
+}
+.lastNameInput {
+    margin: 12px;
+    padding-top: 16px;
+
+}
+.wsuIDInput {
+    margin: 12px;
+    padding-top: 16px;
+
+}
+.emailInput {
+    margin: 12px;
+    padding-top: 16px;
+
+}
+.phoneInput {
+    margin: 12px;
+    padding-top: 16px;
+
+}
+.passwordInput {
+    margin: 12px;
+    padding-top: 16px;
+
+}
+.account_Type {
+    margin-left: 12px;
+    padding-top: 16px;
+
+}
+.account_type_input {
+    margin: 12px;
+    margin-left: 4px;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+}
+.button.is-block.is-info.is-large.is-fullwidth {
+    display: block;
+    padding: 6px 12px 6px 12px;
+    margin: 24px;
+    margin-top: 30px;
+    margin-left: 12px;
+    background-color: rgb(51, 126, 175);
+    color: white;
+    width:247px;
+    height: 40px;
+    font-size: 120%;
+
+}
+button.select_btn.btn-md.btn-primary{
+    display:block;
+    margin: auto;
+}

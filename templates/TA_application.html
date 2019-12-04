@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>TA Applicants</title>
+    <link rel="shortcut icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/styles/TA_applicationcss.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container-fluid display_course_page">
+      <div class="row d-flex justify-content-center">
+        <div class="display_course_box_form">
+            <h1 class="display_course_box_form_header">TA Applicants</h1>
+            <h5 class="display_course_box_form_subheader">Select course to view applicants</h5>
+            <form id="display_course_box_form_subheader_form" method = "POST" action="/TA_application">
+                <select class="account_type_input" name="class_title">
+                    {% for i in data %}
+                    <option value="{{i.title}}">{{i.title}}</option>
+                    {% endfor %}
+                </select>
+                <br><br><button class="select_btn btn-md btn-secondary">Display Applicants</button>
+            </form>
+
+            <!-- <form id="select_student_form" method = "POST" action="/view_profile_select"> -->
+            <div class="container-fluid list_students">
+                {% for i in students %}
+                <div class="row justify-content-between">
+                    <div>
+                        <a href="{{ url_for('render_profile_select', studentID = i.studentID )}}" name = "studentID">
+                            {{i.name}} {{i.lastName}}
+                        </a>
+                        
+                    </div>    
+                    <div>
+                        <form method = "POST" action = "/TA_application_status">
+                            <button class="select_btn btn-sm btn-light accept" name="Accept" value="Accept">Accept</button>
+                            <button class="select_btn btn-sm btn-dark reject" name="Reject"  value="Reject">Reject</button>
+                            <input type="hidden" name = "SID" value = "{{i.studentID}}"></div>
+                            <input type="hidden" name = "CID" value = "{{i.classID}}"><div>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- </form> -->
+    </div>  
+
+        </div>
+      </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

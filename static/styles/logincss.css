@@ -1,0 +1,53 @@
+.login_box_form{
+    align-content: center;
+    text-align: center;
+    padding: 4em;
+    margin:10em;
+    font-size: 120%;
+    background-color:#5e6a71;
+}
+
+.login_page{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    min-height: 80vh;
+    background: url("../resources/spark.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;  
+
+
+}
+.login_box_form_header{
+    font-weight: bold;
+    color:white;
+}
+.login_box_form_line{
+    border-width: .1em;
+    border-color: black;
+
+}
+.login_box_form_name{
+    margin: .1em;
+    border-color: black;
+    border-width: .15em;
+}
+.login_box_form_password{
+    margin: .1em;
+    border-color: black;
+    border-width: .15em;
+}
+
+.login_box_form_signup{
+    color: white;
+}
+
+.input.is-large{
+    margin-bottom: 0.3em;
+}
+
+label.checkbox{
+    color: white;
+}

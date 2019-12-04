@@ -1,0 +1,99 @@
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>View Profile</title>
+    <link rel="shortcut icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/styles/viewprofilecss.css">
+
+
+
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <div class="container-fluid view_profile">
+        <div class = "row d-flex justify-content-around">
+            <div class=" col-md-7 view_profile_column_1">
+                <div class="view_profile_name">
+                    <h2>{{ current_user.name + " " + current_user.lastName }}<span>'s Profile</span></h2>
+                    {% if not current_user.isTeacher %}
+                    <a href="{{ url_for('render_edit_profile') }}" class="navbar-item">
+                        <h4 style="font-size: 20">Edit Profile / Apply for TA</h4>
+                    </a>
+                    {% else %}
+                    <a href="{{ url_for('render_edit_profile') }}" class="navbar-item">
+                        Edit Profile
+                    </a>
+                    {% endif %}
+                    
+                    <hr class ="view_profile_line">
+                </div>
+                <div class="view_profile_title">
+                    {% if not current_user.isTeacher %}
+                    <h3>Account type: Student</h3>
+                    {% else %}
+                    <h3>Account type: Instructor</h3>
+                    {% endif %}
+                </div>
+                <div class="view_profile_information">
+                    <div class="view_profile_information_general">
+                        <h4 style="margin-bottom: .3em;">Contact Information</h4>
+                        <div>Name: <span class="view_profile_information_name">{{ name + " " + lastName }}</span><br></div>
+                        <div>ID: <span class="view_profile_information_id">{{ userID }}</span><br></div>
+                        <div>Email: <span class="view_profile_information_email">{{ email }}</span><br></div>
+                        <div>Phone: <span class="view_profile_information_phone">{{ phone }}</span><br></div>
+                    </div>
+                    {% if not current_user.isTeacher %}
+                    <div class="view_profile_information_student">
+                        <h4 style="margin-bottom: .3em;">Education Information</h4>
+                        <div>Major: <span class="view_profile_information_major">{{ major }}</span><br></div>
+                        <div>GPA: <span class="view_profile_information_gpa">{{ gpa }}</span><br></div>
+                        <div>Graduation Date: <span class="view_profile_information_graduation_data">{{ grad_date }}</span><br></div>
+                        <div>Experience: <span class="view_profile_information_experience">{{ experience }}</span><br></div>
+                    </div>
+
+                    <div class="view_profile_information_pref">
+                            <h4 style="margin-bottom: .3em;">TA Applications</h4>
+                            <ul class = "view_profile_information_courses">
+
+                                {% if data2[0] == null %}
+                                    No current Applications
+                                {% else %}
+                                
+                                    {% for i in data2 %}
+                                    <li>{{i.classID}}
+                                          {% if i.status == 1 %}
+                                            <label class="status_accepted"> Accepted </label>
+                                          {% elif i.status == -1 %}
+                                            <label class="status_rejected"> Rejected </label>
+
+                                          {% else %}
+                                            <label class="status_pending"> Pending </label>
+                                          {% endif %}
+                                    </li>
+                                    {% endfor %}
+
+                                {% endif %}
+                            </ul>
+                        </div>
+    
+                    
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+
+</body>
+</html>

@@ -110,3 +110,11 @@ h2{
     margin-top: 8%;
     min-width: 70%;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="account_info"] {
+        min-width: 50vw;
+    }
+  }
+

@@ -18,26 +18,6 @@
     margin-bottom: 2em;
     justify-content: center;
 }
-.firstname_input {
-    margin-left: 4px;
-}
-.lastname_input {
-    margin-left: 6px;
-}
-
-.wsuID_input {
-    margin-left: 20px;
-}
-
-.email_input {
-    margin-left: 0px;
-}
-.phone_input {
-    margin-left: 25px;
-}
-.password_input {
-    margin-left: 16px;
-}
 
 .accountInputInfo {
     margin: 24px;
@@ -94,13 +74,39 @@
     margin-top: 30px;
     margin-left: 12px;
     background-color: rgb(51, 126, 175);
+    border-radius: 2em;
     color: white;
     width:247px;
     height: 40px;
     font-size: 120%;
 
 }
-button.select_btn.btn-md.btn-primary{
+
+h2{
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.create_account{
     display:block;
     margin: auto;
+    border-radius: 0.5em;
+    padding: 5px 15px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.form-group{
+    margin-left: 15%;
+    width: 70%;
+}
+
+.account_type_div{
+    width: 100%;
+    margin-left: 5%;
+
+}
+
+.accountInputInfo{
+    margin-top: 8%;
+    min-width: 70%;
 }

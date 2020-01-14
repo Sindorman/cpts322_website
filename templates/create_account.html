@@ -3,7 +3,7 @@
 <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -11,6 +11,7 @@
     <title> Create Profile </title>
     <link rel="shortcut icon" href="../static/resources/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../static/resources/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/styles/common.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/createaccount.css">
  
 </head>
@@ -22,46 +23,48 @@
     <div class="container-fluid d-flex justify-content-center createProfile">
         <div class="row account_info">
             <form id="createAccountForm" method="POST" action="newaccount">
-                <div class="accountInputInfo">
+                <div class="col-md-6 mx-auto accountInputInfo">
                     <h2>Account Information</h2>
 
-                    <div class="firstNameInput">
-                            <label class="labels">First Name:</label>
-                            <input class="firstname_input" name="firstname_input" placeholder="First Name"> </input>
+                    <div class="form-group">
+                            <input class="form-control firstname_input" required type="text" name="firstname_input"> </input>
+                            <label class="form-control-placeholder">First Name</label>
                     </div>
-                    <div class="lastNameInput">
-                            <label class="labels">Last Name:</label>
-                            <input class="lastname_input" name="lastname_input" placeholder="Last Name"> </input>
+                    <div class="form-group">
+                            <input class="form-control lastname_input" required type="text" name="lastname_input" > </input>
+                            <label class="form-control-placeholder">Last Name </label>
                     </div>
-                    <div class="wsuIDInput">
-                            <label class="labels">WSU ID:</label>
-                            <input class="wsuID_input" name="wsuID_input" placeholder="WSU ID"> </input>
+                    <div class="form-group">
+                            <input class="form-control wsuID_input" required type="number" name="wsuID_input"> </input>
+                            <label class="form-control-placeholder">WSU ID </label>
                     </div>
-                    <div class="emailInput">
-                            <label class="labels">WSU Email:</label>
-                            <input class="email_input" name="email_input" placeholder="WSU email"> </input>
+                    <div class="form-group">
+                            <input class="form-control email_input" required type="email" name="email_input"> </input>
+                            <label class="form-control-placeholder">WSU email </label>
                     </div>
-                    <div class="phoneInput">
-                            <label class="labels">Phone #:</label>
-                            <input class="phone_input" name="phone_input" placeholder="Phone Number"> </input>
+                    <div class="form-group">
+                            <input class="form-control phone_input" required type="number" name="phone_input"> </input>
+                            <label class="form-control-placeholder">Phone number </label>
                     </div>
-                    <div class="passwordInput">
-                            <label class="labels">Password:</label>
-                            <input class="password_input" name="password_input" placeholder="Password"> </input>
-                    </div>
-                    
-                    <label class="account_Type">Specify Account Type:</label>
-
-                    <select class="account_type_input" name="account">
-
-                        <option value="Student">Student</option>
-                        <option value="Instructor">Instructor</option>
-                    </select>
-                    <div class="Status">
-                            <label id="status_update">{{ reason }}</label>
+                    <div class="form-group">
+                            <input class="form-control password_input" required type="password" name="password_input"> </input>
+                            <label class="form-control-placeholder">Password </label>
                     </div>
                     
-                    <button class="select_btn btn-md btn-primary ">Create Account</button>
+                    <div class="account_type_div">
+                        <label class="account_Type">Specify Account Type:</label>
+
+                        <select class="account_type_input" name="account">
+
+                            <option value="Student">Student</option>
+                            <option value="Instructor">Instructor</option>
+                        </select>
+                        <div class="Status">
+                                <label id="status_update">{{ reason }}</label>
+                        </div>
+                        
+                        <button class="select_btn btn-md btn-primary create_account">Create Account</button>
+                    </div>
 
                 </div>
             </form>

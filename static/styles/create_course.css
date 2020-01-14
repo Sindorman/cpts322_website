@@ -41,3 +41,7 @@
 .create_course_box_form_signup{
     color: white;
 }
+
+.account_info{
+    min-width: 40vw;
+}

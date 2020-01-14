@@ -26,3 +26,7 @@ footer{
 a.footer-ref{
     color: white;
 }
+
+.select_btn{
+    border-radius: 0.5em;
+}

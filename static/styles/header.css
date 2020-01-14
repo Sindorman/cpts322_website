@@ -28,3 +28,7 @@ a{
 a:hover{
     color: yellow
 }
+
+.select_btn{
+    border-radius: 0.5em;
+}

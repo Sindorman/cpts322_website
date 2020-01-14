@@ -103,7 +103,6 @@ h2{
 .account_type_div{
     width: 100%;
     margin-left: 5%;
-
 }
 
 .accountInputInfo{
@@ -111,10 +110,24 @@ h2{
     min-width: 70%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     /* For mobile phones: */
     [class*="account_info"] {
         min-width: 50vw;
     }
-  }
+    [class*="create_account"] {
+        padding: 2px 7px;
+    }
+    [class*="form-control-placeholder"] {
+        font-size: 75%;
+    }
+    .form-control:focus + .form-control-placeholder,
+    .form-control:valid + .form-control-placeholder{
+        font-size: 55%;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+}
 

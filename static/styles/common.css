@@ -12,8 +12,7 @@
     color: black;
 }
 
-.form-control:focus + .form-control-placeholder,
-.form-control:valid + .form-control-placeholder {
+.form-control:focus + .form-control-placeholder{
     font-size: 75%;
     transform: translate3d(0, -40%, 0);
     opacity: 1;

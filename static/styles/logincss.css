@@ -1,7 +1,7 @@
 .login_box_form{
     align-content: center;
     text-align: center;
-    padding: 4em;
+    padding: 2.5em 3.5em 2.5em 3.5em;
     margin:10em;
     font-size: 120%;
     background-color:#5e6a71;
@@ -23,6 +23,7 @@
 .login_box_form_header{
     font-weight: bold;
     color:white;
+    margin-bottom: 10%;
 }
 .login_box_form_line{
     border-width: .1em;
@@ -44,10 +45,27 @@
     color: white;
 }
 
-.input.is-large{
-    margin-bottom: 0.3em;
+.form-group{
+    width: 100%;
+    text-align: initial;
 }
 
-label.checkbox{
-    color: white;
+.signin{
+    width: 50%;
+    height: 13%;
+}
+.form-control-placeholder{
+    line-height: 1.25;
+}
+
+
+@media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .login_box_form{
+        padding: 2em;
+        margin: 2.3em 2.3em 6.5em 2.3em;
+    }
+    .form-control:focus + .form-control-placeholder{
+        font-size: 55%;
+    }
 }

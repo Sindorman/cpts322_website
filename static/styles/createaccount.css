@@ -83,7 +83,7 @@
 }
 
 h2{
-    margin-left: 10%;
+    margin-left: 7%;
     margin-bottom: 10%;
 }
 
@@ -98,6 +98,7 @@ h2{
 .form-group{
     margin-left: 15%;
     width: 70%;
+    text-align: initial;
 }
 
 .account_type_div{
@@ -106,6 +107,8 @@ h2{
 }
 
 .accountInputInfo{
+    justify-content: center;
+    text-align: center;
     margin-top: 8%;
     min-width: 70%;
 }
@@ -121,8 +124,7 @@ h2{
     [class*="form-control-placeholder"] {
         font-size: 75%;
     }
-    .form-control:focus + .form-control-placeholder,
-    .form-control:valid + .form-control-placeholder{
+    .form-control:focus + .form-control-placeholder{
         font-size: 55%;
     }
 
